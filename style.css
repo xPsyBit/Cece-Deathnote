@@ -1,0 +1,154 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  background-image: url("https://i.pinimg.com/originals/df/80/8f/df808f6bfc95b04ecfa02502c905ca7e.jpg");
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.scene {
+  width: 45%;
+  height: 90%;
+  margin: 5% 5% 5% 50%;
+}
+
+.book {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  transform-style: preserve-3d;
+}
+
+.page {
+  cursor: pointer;
+  position: absolute;
+  color: black;
+  width: 100%;
+  height: 100%;
+
+  transition: 1.5s transform;
+  transform: translateZ(-1px);
+  transform-style: preserve-3d;
+  transform-origin: left center;
+}
+.front,
+.back {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  padding: 10% 5% 5%;
+  box-sizing: border-box;
+
+  backface-visibility: hidden;
+  background-color: rgb(250, 246, 236);
+  overflow: hidden;
+}
+.back {
+  transform: rotateY(180deg);
+}
+
+.page.active {
+  z-index: 1;
+  transform: translateZ(0);
+}
+.page.flipped {
+  transform: translateZ(0) rotateY(-180deg);
+}
+.page.flipped:last-of-type {
+  z-index: 1;
+}
+
+p {
+  font-family: "Indie Flower", cursive;
+  font-size: 2em;
+  margin: 0.1em 0.5em;
+}
+
+.qr {
+  margin: 50px auto;
+  max-width: 50%;
+}
+.qr img {
+  display: block;
+}
+
+.page div {
+  border: 0.1em solid black;
+}
+
+#first,
+#last {
+  background-color: black;
+}
+
+#first h1 {
+  color: white;
+  font-family: "DEATHNOTE Font";
+  font-size: 2em;
+}
+
+.author {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  color: rgba(255, 255, 255, 0.801);
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+#fix p {
+  text-align: center;
+  font-size: 5em;
+}
+
+#last {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#last p {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 0.5em;
+  text-align: center;
+}
+
+#ryuk {
+  font-family: "DEATHNOTE Font";
+  font-size: 5em;
+  font-style: normal;
+}
+
+@media only screen and (max-width: 768px) {
+  #first {
+    position: relative;
+    left: -100%;
+    width: 200%;
+  }
+
+  #fix {
+    position: relative;
+    top: -100%;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+
+  #fix p {
+    font-size: 1.5em;
+    margin: auto;
+  }
+}
