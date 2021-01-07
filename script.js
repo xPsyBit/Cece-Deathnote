@@ -21,3 +21,8 @@ function nextPage() {
     .addClass("active")
     .siblings();
 }
+
+function hide() {
+  document.getElementById("note").style.transition = "opacity 1s linear";
+  document.getElementById("note").style.opacity = 0;
+}

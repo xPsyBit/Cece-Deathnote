@@ -18,6 +18,8 @@ h1 {
   width: 45%;
   height: 90%;
   margin: 5% 5% 5% 50%;
+
+  z-index: 1;
 }
 
 .book {
@@ -102,7 +104,7 @@ p {
   font-size: small;
   color: rgba(255, 255, 255, 0.801);
   position: absolute;
-  bottom: 20px;
+  bottom: 5px;
   left: 20px;
 }
 
@@ -131,6 +133,41 @@ p {
   font-style: normal;
 }
 
+#note {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  width: 30%;
+  height: 50%;
+  z-index: -1;
+
+  background-color: purple;
+  border: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#note p {
+  font-family: "Cedarville Cursive", cursive;
+}
+
+#note p span {
+  position: absolute;
+  right: 5%;
+}
+
+.fa-heart {
+  color: rgb(255, 1, 255);
+}
+
+.fa-github {
+  color: white;
+  font-size: large;
+  padding: 5px;
+}
+
 @media only screen and (max-width: 768px) {
   #first {
     position: relative;
@@ -150,5 +187,14 @@ p {
   #fix p {
     font-size: 1.5em;
     margin: auto;
+  }
+
+  #note {
+    z-index: 2;
+    left: 10%;
+    width: 80%;
+
+    visibility: visible;
+    opacity: 1;
   }
 }
