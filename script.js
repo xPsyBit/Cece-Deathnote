@@ -25,4 +25,8 @@ function nextPage() {
 function hide() {
   document.getElementById("note").style.transition = "opacity 1s linear";
   document.getElementById("note").style.opacity = 0;
+  
+  setTimeout(function() {
+    document.getElementById("note").style.zIndex = -1;
+  }, 1000);
 }
