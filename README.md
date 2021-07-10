@@ -1,2 +1,2 @@
-# Cece-Deathnote
-A Deathnote website which outline Cece and Me
+# Cede-Deathnote
+A Deathnote website which outline Cede and Me
